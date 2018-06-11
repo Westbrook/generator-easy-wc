@@ -1,0 +1,47 @@
+{
+  "verbose": false,
+  "plugins": {
+    "local": {
+      "browsers": ["chrome", "firefox"],
+      "browserOptions": {
+        "chrome": ["headless", "disable-gpu", "no-sandbox"],
+        "firefox": ["-headless"]
+      }
+    },
+    "sauce": {
+      "disabled": true,
+      "username": "username",
+      "accessKey": "accessKey",
+      "browsers": [
+        {
+          "browserName": "firefox",
+          "platform": "Windows 10",
+          "version": "60"
+        },
+        {
+          "browserName": "microsoftedge",
+          "platform": "Windows 10",
+          "version": ""
+        },
+        {
+          "browserName": "safari",
+          "platform": "OS X 10.12",
+          "version": "11"
+        }
+      ]
+    },
+    "istanbub": {
+      "dir": "./coverage",
+      "reporters": ["text", "lcov"],
+      "include": ["*.js"],
+      "thresholds": {
+        "global": {
+          "statements": 100,
+          "branches": 100,
+          "functions": 100,
+          "lines": 100
+        }
+      }
+    }
+  }
+}

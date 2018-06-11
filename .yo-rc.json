@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Westbrook Johnson",
+      "authorEmail": "westbrook.johnson@gmail.com",
+      "authorUrl": "github.com/westbrook"
+    }
+  }
+}

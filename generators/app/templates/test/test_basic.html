@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title><%= elementName %> test</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/wct-browser-legacy/browser.js"></script>
+
+    <script type="module" src="../<%= elementName %>.js"></script>
+  </head>
+  <body>
+
+    <test-fixture id="<%= elementName %>-tester">
+      <template>
+        <<%= elementName %>></<%= elementName %>>
+      </template>
+    </test-fixture>
+
+    <script type="module">
+      import '../node_modules/axe-core/axe.min.js';
+      import {axeReport} from '../node_modules/pwa-helpers/axe-report.js';
+
+      describe('<%= elementName %>', () => {
+        let should = chai.should();
+        let element;
+
+        beforeEach(function() {
+          element = fixture('<%= elementName %>-tester');
+        });
+
+        it('a11y', function() {
+          return axeReport(element);
+        });
+
+        it('This element has failing tests for you to correct!', () => {
+          element.prop1.should.equal('Extravagant but wrong or missing property value.');
+          const elementShadowRoot = element.shadowRoot;
+          const elementHeader = elementShadowRoot.querySelector('h2');
+          elementHeader.should.not.equal(null);
+        });
+
+      });
+    </script>
+
+  </body>
+</html>
