@@ -21,7 +21,7 @@ yo easy-wc
     _-----_     ╭──────────────────────────╮
    |       |    │      Welcome to the      │
    |--(o)--|    │      super-excellent     │
-  `---------´   │ generator-opinionated-wc │
+  `---------´   │     generator-easy-wc    │
    ( _´U`_ )    │        generator!        │
    /___A___\   /╰──────────────────────────╯
     |  ~  |     
