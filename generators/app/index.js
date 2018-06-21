@@ -8,7 +8,7 @@ module.exports = class extends Generator {
     this.appname = this._dashedCaseFromSpaces(this.appname);
     // Have Yeoman greet the user.
     this.log(
-      yosay(`Welcome to the super-excellent ${chalk.red('generator-opinionated-wc')} generator!`)
+      yosay(`Welcome to the super-excellent ${chalk.red('generator-easy-wc')} generator!`)
     );
 
     const prompts1 = [
@@ -31,7 +31,9 @@ module.exports = class extends Generator {
         name: 'elementName',
         message: 'What would you like this element to be called?',
         validate: input =>
-          input.indexOf('-') === -1 ? "Custom element names require at least one `-`" : true,
+          input.indexOf('-') === -1
+            ? 'Custom element names require at least one `-`'
+            : true,
         default: this.appname
       }
     ];
@@ -43,7 +45,7 @@ module.exports = class extends Generator {
           name: 'className',
           message: 'What name would you like for the class that describes this element?',
           validate: input =>
-            input.indexOf('-') > -1 ? "Class names cannot include `-`" : true,
+            input.indexOf('-') > -1 ? 'Class names cannot include `-`' : true,
           default: this._makeClassName(props1.elementName)
         }
       ];
@@ -52,7 +54,8 @@ module.exports = class extends Generator {
           {
             type: 'input',
             name: 'packageName',
-            message: 'What should the element\'s package name be? (this will be combined with the user or org name a la: `@org/package-name`)',
+            message:
+              "What should the element's package name be? (this will be combined with the user or org name a la: `@org/package-name`)",
             default: props1.elementName
           },
           {
@@ -65,7 +68,7 @@ module.exports = class extends Generator {
         return this.prompt(prompts3).then(props3 => {
           this.props = Object.assign({}, props1, props2, props3);
         });
-      })
+      });
     });
   }
 

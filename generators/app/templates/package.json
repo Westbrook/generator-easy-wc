@@ -1,5 +1,5 @@
 {
-  "name": "@<%= orgName %>/<%= elementName %>",
+  "name": "@<%= orgName %>/<%= packageName %>",
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "grep": "grep -Ir --exclude=analysis.json --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=coverage",
