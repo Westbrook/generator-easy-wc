@@ -16,7 +16,7 @@ import {style} from './<%= elementName %>-styles.js';
  * @polymer
  * @demo demo/index.html
  */
-class <%=className%> extends LitElement {
+export class <%=className%> extends LitElement {
   /**
    * Declare the properties that will
    * trigger calls to `_render`
@@ -34,13 +34,22 @@ class <%=className%> extends LitElement {
     this.greeting = 'hello';
   }
   /**
+   * Style application abstracted from the main template for ease of
+   * extendability when making child classes with custom styles
+   *
+   * @return {TemplateResult}
+   */
+  _renderStyle() {
+    return style;
+  }
+  /**
    * Build the TemplateResult that represents the elements DOM representation
    *
    * @return {TemplateResult}
    */
   _render(props) {
     return html`
-        ${style}
+        ${this._renderStyle()}
         <h1><%=elementName%> says '${greeting}'</h1>
     `;
   }
