@@ -94,10 +94,12 @@ module.exports = class extends Generator {
     const elementName = this.props.elementName;
 
     this.fs.copyTpl(
-      `${this.templatePath()}/**/!(_)*`,
+      `${this.templatePath()}/!(src)**/*`,
       this.destinationPath(),
       this.props
     );
+
+    this.fs.copyTpl(`${this.templatePath()}/*`, this.destinationPath(), this.props);
 
     this.fs.copyTpl(
       `${this.templatePath()}/**/.!(gitignore)*`,
