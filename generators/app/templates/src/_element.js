@@ -47,10 +47,10 @@ export class <%=className%> extends LitElement {
    *
    * @return {TemplateResult}
    */
-  _render(props) {
+  _render() {
     return html`
         ${this._renderStyle()}
-        <h1><%=elementName%> says '${greeting}'</h1>
+        <h1><%=elementName%> says '${this.greeting}'</h1>
     `;
   }
 };

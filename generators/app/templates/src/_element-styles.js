@@ -7,6 +7,7 @@ export const style = html`
     box-sizing: border-box;
     contain: content;
   }
+  
   :host([hidden]) {
     display: none;
   }
