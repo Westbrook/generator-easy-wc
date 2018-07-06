@@ -6,13 +6,26 @@
 First, install [Yeoman](http://yeoman.io) and generator-easy-wc using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
-npm install -g yo
-npm install -g generator-easy-wc
+yarn global add yo
+yarn global add git+https://github.com/Westbrook/generator-easy-wc.git
 ```
 
-Then generate your new project:
+Conversely, you could use your own version of the generator with `yarn link`:
 
 ```bash
+yarn global add yo
+git clone https://github.com/Westbrook/generator-easy-wc.git
+cd generator-easy-wc
+yarn link
+```
+
+Then generate your new project. Creating the git project before generating allows `husky` to set up your hooks appropriately, and making a new branch before generating means you can submit a PR in that case you are working with a team:
+
+```bash
+mkdir element-name-here
+cd element-name-here
+git init
+git checkout -b element-name-here
 yo easy-wc
 ```
 

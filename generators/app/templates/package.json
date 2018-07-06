@@ -22,7 +22,7 @@
     "precommit": "lint-staged",
     "test": "polymer test --module-resolution=node --npm",
     "update-settings": "scripty",
-    "nsp": "nsp"
+    "nsp": "nsp check ."
   },
   "devDependencies": {
     "@polymer/iron-component-page": "^3.0.0-pre.19",
