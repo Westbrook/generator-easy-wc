@@ -23,7 +23,6 @@
     "eslint-config-xo": "^0.18.2",
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-prettier": "^2.2.0",
-    "husky": "^0.14.3",
     "jest": "^21.0.0",
     "jest-cli": "^21.0.0",
     "lint-staged": "^4.2.1",
@@ -35,6 +34,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "husky": "^0.14.3",
     "yeoman-generator": "^3.0.0",
     "yosay": "^2.0.1"
   },
