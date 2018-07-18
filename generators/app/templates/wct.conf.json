@@ -2,7 +2,7 @@
   "verbose": false,
   "plugins": {
     "local": {
-      "browsers": ["chrome", "firefox"],
+      "browsers": ["chrome"],
       "browserOptions": {
         "chrome": ["headless", "disable-gpu", "no-sandbox"],
         "firefox": ["-headless"]

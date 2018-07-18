@@ -42,7 +42,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepare": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "release": "release-it --config='config/.release-it.json'",
