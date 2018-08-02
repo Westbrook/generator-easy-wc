@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-easy-wc using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and `generator-easy-wc` using [yarn](https://yarnpkg.com/en/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 yarn global add yo
@@ -16,9 +16,11 @@ Conversely, you could use your own version of the generator with `yarn link`:
 yarn global add yo
 git clone https://github.com/Westbrook/generator-easy-wc.git
 cd generator-easy-wc
+yarn install
 yarn link
 ```
 
+## Initialization
 Then generate your new project. Creating the git project before generating allows `husky` to set up your hooks appropriately. Once you've committed the generated code to master, I'd suggest branching immediately for appropriate use of a PR after you've established the functionality of your element:
 
 ```bash
@@ -32,7 +34,7 @@ git commit -am 'Generated Element'
 git checkout -b element-name-here
 ```
 
-## Initialization
+## Prompts
 ```bash
     _-----_     ╭──────────────────────────╮
    |       |    │      Welcome to the      │
