@@ -19,14 +19,17 @@ cd generator-easy-wc
 yarn link
 ```
 
-Then generate your new project. Creating the git project before generating allows `husky` to set up your hooks appropriately, and making a new branch before generating means you can submit a PR in that case you are working with a team:
+Then generate your new project. Creating the git project before generating allows `husky` to set up your hooks appropriately. Once you've committed the generated code to master, I'd suggest branching immediately for appropriate use of a PR after you've established the functionality of your element:
 
 ```bash
 mkdir element-name-here
 cd element-name-here
 git init
-git checkout -b element-name-here
 yo easy-wc
+# ... follow the prompts ...
+git add .
+git commit -am 'Generated Element'
+git checkout -b element-name-here
 ```
 
 ## Initialization
