@@ -91,7 +91,7 @@ To release a new version of your code to Github and NPM use:
 ```
 yarn release
 ```
-By default this will create a "bug fix", meaning it will bump the last number of the semver 0.0.x. Adding `minor`, `major`, or an explicit semver `1.1.2` is also available when making more precise releases.
+By default this will create a "bug fix", meaning it will bump the last number of the semver 0.0.x. Adding `minor`, `major`, or an explicit semver `1.1.2` is also available when making more precise releases. Visit the  `release-it` [documentation site](https://webpro.github.io/release-it/) for more information on the underlying API.
 
 Once the release process is complete this command will also trigger the `yarn pages` command deploying your component documentation to GitHub.
 
