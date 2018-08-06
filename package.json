@@ -1,6 +1,6 @@
 {
   "name": "generator-easy-wc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "File structure and Yarn scripting for developing, testing, documenting, and deploying a web component.",
   "homepage": "",
   "author": {
