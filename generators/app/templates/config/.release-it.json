@@ -1,8 +1,5 @@
 {
-  "pkgFiles": [
-    "package.json",
-    "bower.json"
-  ],
+  "pkgFiles": ["package.json"],
   "github": {
     "release": true,
     "releaseName": "Release %s",
