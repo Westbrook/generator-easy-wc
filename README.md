@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and `generator-easy-wc` using [yarn](h
 
 ```bash
 yarn global add yo
-yarn global add git+https://github.com/Westbrook/generator-easy-wc.git
+yarn global add generator-easy-wc
 ```
 
 Conversely, you could use your own version of the generator with `yarn link`:
