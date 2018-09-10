@@ -10,16 +10,6 @@ yarn global add yo
 yarn global add generator-easy-wc
 ```
 
-Conversely, you could use your own version of the generator with `yarn link`:
-
-```bash
-yarn global add yo
-git clone https://github.com/Westbrook/generator-easy-wc.git
-cd generator-easy-wc
-yarn install
-yarn link
-```
-
 ## Initialization
 Then generate your new project. Creating the git project before generating allows `husky` to set up your hooks appropriately. Once you've committed the generated code to master, I'd suggest branching immediately for appropriate use of a PR after you've established the functionality of your element:
 
