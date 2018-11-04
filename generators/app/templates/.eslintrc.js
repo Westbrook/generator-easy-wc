@@ -10,5 +10,6 @@ module.exports = {
   "rules": {
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     "block-spacing": ["error", "always"],
+    "max-len": ["error", { "ignoreComments": true }],
   },
 };

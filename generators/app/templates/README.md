@@ -80,6 +80,14 @@ To serve your component in a browser, and have your default automatically opened
 yarn serve
 ```
 
+While this is running you can access the following helpful URLs:
+
+| URL | Description |
+| --- | --- |
+| `/` | The analysis.json documentation and demos of the component. |
+| `/test` | Your WTC tests rum in the browser of your choice. (ignore the `lodash` errors...) |
+| `/demo` | Direct path to main demo page, no navigation will be present. |
+
 #### Deploy gh-pages
 To publish the current version of your documentation of GitHub pages use:
 ```

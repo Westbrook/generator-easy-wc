@@ -5,7 +5,7 @@
     "grep": "grep -Ir --exclude=analysis.json --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=coverage",
     "analyze": "polymer analyze > analysis.json",
     "preserve": "yarn analyze",
-    "serve": "polymer serve --open",
+    "serve": "polymer serve --open --open-path .",
     "copy:analysis": "cp analysis.json pages-dist/",
     "copy:pages-dist": "cp -r build/default/ pages-dist/",
     "prepages": "yarn analyze && polymer build && yarn copy:pages-dist && yarn copy:analysis",
@@ -19,16 +19,15 @@
     "lint:polymer": "polymer lint",
     "lint:js": "yarn eslint . --fix",
     "lint:html": "yarn htmlhint --ignore **/bower_components/**,**/node_modules/**",
-    "precommit": "lint-staged",
     "test": "polymer test --module-resolution=node --npm",
     "update-settings": "scripty",
     "nsp": "nsp check ."
   },
   "devDependencies": {
-    "@polymer/iron-component-page": "^3.0.0-pre.19",
-    "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
-    "@polymer/iron-test-helpers": "^3.0.0-pre.19",
-    "@polymer/test-fixture": "^3.0.0-pre.19",
+    "@polymer/iron-component-page": "^4.0.0",
+    "@polymer/iron-demo-helpers": "^3.0.0",
+    "@polymer/iron-test-helpers": "^3.0.0",
+    "@polymer/test-fixture": "^4.0.0",
     "axe-core": "^3.0.0",
     "babel-eslint": "^8.0.1",
     "chai": "^4.1.2",
@@ -37,7 +36,7 @@
     "eslint-plugin-html": "^4.0.3",
     "gh-pages": "^1.0.0",
     "htmlhint": "^0.9.13",
-    "husky": "^0.14.3",
+    "husky": "^1.1.2",
     "lint-staged": "^4.3.0",
     "mocha": "^5.1.0",
     "nsp": "^3.2.1",
@@ -69,7 +68,12 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@polymer/lit-element": "~0.5.1",
+    "@polymer/lit-element": "~0.6.1",
     "@webcomponents/webcomponentsjs": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
