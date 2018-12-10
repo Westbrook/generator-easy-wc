@@ -26,7 +26,6 @@
     "jest": "^21.0.0",
     "jest-cli": "^21.0.0",
     "lint-staged": "^4.2.1",
-    "nsp": "^2.6.3",
     "prettier": "^1.7.0",
     "release-it": "^7.4.5",
     "yeoman-assert": "^3.1.0",
@@ -44,7 +43,6 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepare": "nsp check",
     "pretest": "eslint .",
     "precommit": "lint-staged",
     "release": "release-it --config='config/.release-it.json'",
