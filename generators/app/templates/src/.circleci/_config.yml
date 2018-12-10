@@ -12,5 +12,4 @@ jobs:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-      - run: yarn nsp
       - run: yarn test
