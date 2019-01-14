@@ -1,6 +1,9 @@
 {
   "name": "@<%= orgName %>/<%= packageName %>",
   "license": "SEE LICENSE IN LICENSE",
+  "repository": "westbrook/lit-test",
+  "main": "<%= elementName %>.js",
+  "module": "<%= elementName %>.js",
   "scripts": {
     "grep": "grep -Ir --exclude=analysis.json --exclude-dir=bower_components --exclude-dir=node_modules --exclude-dir=coverage",
     "analyze": "polymer analyze > analysis.json",
@@ -65,8 +68,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@polymer/lit-element": "~0.6.1",
-    "@webcomponents/webcomponentsjs": "^2.0.0"
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "^2.0.0"
   },
   "husky": {
     "hooks": {
