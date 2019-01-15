@@ -110,6 +110,8 @@ yarn test
 ```
 Update your settings in `wct.conf.json` if you want to attach to Sauce Labs or other browsers, etc.
 
+In order for this code to run it will ask that you have Java 8 installed, but it really means the [Java Developer Tool Kit 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html). Once JDK8 is available on your system, then this command will run as desired.
+
 #### Changes across multiple repos
 To make it easier to make changed to your project configurations across multiple repos the command `yarn update-settings` has been provided to batch update a number of configuration files in the repo. If you want to diverge from the expected settings there in, but would still like to do so in batch, you can make changes to `scripts/update-settings` in order to point to an separate package of configuration files.
 
