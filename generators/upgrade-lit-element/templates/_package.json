@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "^2.0.0"
+  }
+}
