@@ -71,7 +71,7 @@
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "latest",
-    "lit-element": "^2.0.0"
+    "lit-element": "^2.0.0-rc.2"
   },
   "husky": {
     "hooks": {

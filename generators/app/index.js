@@ -34,7 +34,8 @@ module.exports = class extends Generator {
           input.indexOf('-') === -1
             ? 'Custom element names require at least one `-`'
             : true,
-        default: this.appname
+        default: this.appname,
+        store: true
       }
     ];
 

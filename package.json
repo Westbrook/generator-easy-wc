@@ -1,6 +1,6 @@
 {
   "name": "generator-easy-wc",
-  "version": "0.0.11",
+  "version": "1.0.0-rc.25",
   "description": "File structure and Yarn scripting for developing, testing, documenting, and deploying a web component.",
   "homepage": "",
   "author": {
@@ -34,6 +34,7 @@
   "dependencies": {
     "chalk": "^2.1.0",
     "generator-easy-wc": "^0.0.3",
+    "glob-fs": "^0.1.7",
     "global": "^4.3.2",
     "husky": "^1.0.0-rc.13",
     "yeoman-generator": "^3.0.0",
