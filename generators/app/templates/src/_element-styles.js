@@ -1,7 +1,6 @@
-import {html} from '@polymer/lit-element/lit-element.js';
+import {css} from 'lit-element/lit-element.js';
 
-export const style = html`
-<style>
+export const style = css`
   :host {
     display: block;
     box-sizing: border-box;
@@ -11,5 +10,4 @@ export const style = html`
   :host([hidden]) {
     display: none;
   }
-</style>
 `;

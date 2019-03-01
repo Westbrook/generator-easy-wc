@@ -34,7 +34,8 @@ module.exports = class extends Generator {
           input.indexOf('-') === -1
             ? 'Custom element names require at least one `-`'
             : true,
-        default: this.appname
+        default: this.appname,
+        store: true
       }
     ];
 
@@ -102,7 +103,7 @@ module.exports = class extends Generator {
     this.fs.copyTpl(`${this.templatePath()}/*`, this.destinationPath(), this.props);
 
     this.fs.copyTpl(
-      `${this.templatePath()}/**/.!(gitignore)*`,
+      `${this.templatePath()}/**/.!(gitignorefile)*`,
       this.destinationRoot(),
       this.props
     );
@@ -121,13 +122,19 @@ module.exports = class extends Generator {
 
     this.fs.copyTpl(
       this.templatePath(`src/_element.js`),
-      this.destinationPath(`${elementName}.js`),
+      this.destinationPath(`src/${elementName}.js`),
       this.props
     );
 
     this.fs.copyTpl(
       this.templatePath(`src/_element-styles.js`),
-      this.destinationPath(`${elementName}-styles.js`),
+      this.destinationPath(`src/${elementName}-styles.js`),
+      this.props
+    );
+
+    this.fs.copyTpl(
+      this.templatePath(`src/_element-base.js`),
+      this.destinationPath(`src/${elementName}-base.js`),
       this.props
     );
   }

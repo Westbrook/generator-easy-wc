@@ -1,0 +1,14 @@
+{
+  "main": "<%= elementName %>.js",
+  "module": "<%= elementName %>.js",
+  "scripts": {
+    "copy": "yarn copy:pages-dist && yarn copy:analysis",
+    "postcopy": "touch pages-dist/.nojekyll",
+    "prepages": "yarn analyze && polymer build && yarn copy",
+    "pages": "gh-pages -t -d pages-dist -m '[skip ci]'"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "lit-element": "^2.0.0-rc.2"
+  }
+}
